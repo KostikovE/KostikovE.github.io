@@ -14,14 +14,24 @@
     <input type="password" placeholder="Введите пароль" name="пароль" required> 
 <p>Пол</p>
 <label for="man">Мужчина</label>
-        <input  type="radio" name="man" value="option1"> 
+        <input  type="radio" name="man" value="option1" id="opt1"> 
 <label for="man">Женчина</label>
-        <input name="woman" type="radio" value="option2" > 
+        <input name="woman" type="radio" value="option2" id = "opt2"> 
  <p><input type="submit" value="Выбрать"></p>   
 
 <p><label for="date">Год рождения</label> </p>
  <input type="date" value="2005-07-21"> 
 
+<p><label for="языки">Я знаю</label> </p>
+    <label>
+    <input type="checkbox" name="languages" value="Русский"  checked="checked" disabled>
+    Русский
+  </label>
+        
+    <label>
+    <input type="checkbox" name="languages" value="Испанский" >
+    Испанский
+  </label>
         
     </form>
 </body>
