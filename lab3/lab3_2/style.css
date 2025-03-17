@@ -1,1 +1,30 @@
+p{
+color:white;
+text-align:right;
+}
+body{
+background-color:black;
+font-size:1.5rem;
+line-height:2rem;
 
+}
+h1{
+  text-align:right;
+  color:red;
+ font-family: Geneva, Arial, Helvetica, sans-serif;
+}
+h2{
+  text-align:right;
+  color:red;
+  font-family: Geneva, Arial, Helvetica, sans-serif;
+    }
+ em{
+  color:green;
+ }
+.wrapper{
+      max-width:960px;
+  margin-left:auto;
+  margin-right:auto;
+  padding-left:10px;
+  padding-right:10px;
+ }
