@@ -6,6 +6,14 @@
   font-style: normal; 
   font-weight: normal; 
 }
+@font-face {
+
+  font-family: "Arsenal SC", sans-serif; 
+
+  src: url("ArsenalSC-Bold.ttf") ; 
+  font-style: normal; 
+  font-weight: normal; 
+}
 p{
 color:white;
 text-align:right;
@@ -37,3 +45,7 @@ h2{
   padding-left:10px;
   padding-right:10px;
  }
+b{
+font-family:"Arsenal SC", sans-serif;
+  
+}
