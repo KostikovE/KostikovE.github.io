@@ -9,7 +9,6 @@
 p{
 color:white;
 text-align:right;
-#font-family: "Roboto", sans-serif;
 }
 body{
 background-color:black;
@@ -20,12 +19,13 @@ line-height:2rem;
 h1{
   text-align:right;
   color:red;
- font-family: Geneva, Arial, Helvetica, sans-serif;
+ font-family: "Roboto",sans-serif;
+
 }
 h2{
   text-align:right;
   color:red;
-  font-family: Geneva, Arial, Helvetica, sans-serif;
+  font-family: "Roboto",sans-serif;
     }
  em{
   color:green;
