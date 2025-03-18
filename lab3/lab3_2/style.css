@@ -8,9 +8,9 @@
 }
 @font-face {
 
-  font-family: "Arsenal SC", sans-serif; 
+  font-family: "Caveat", cursive; 
 
-  src: url("ArsenalSC-Bold.ttf") ; 
+  src: url("Caveat-Bold.ttf") ; 
   font-style: normal; 
   font-weight: normal; 
 }
@@ -46,7 +46,6 @@ h2{
   padding-right:10px;
  }
 strong{
-  font-family:"Arsenal SC", sans-serif;
-  font-weight: 700;
-  font-style: normal;  
+  font-family:"Caveat", cursive;
+ 
 }
