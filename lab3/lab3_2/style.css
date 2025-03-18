@@ -19,7 +19,7 @@ color:white;
 text-align:right;
 }
 body{
-background-color:black;
+background-image: url('patt.svg');
 font-size:1.5rem;
 line-height:2rem;
 
@@ -49,3 +49,4 @@ strong{
   font-family:"Caveat", cursive;
  
 }
+
