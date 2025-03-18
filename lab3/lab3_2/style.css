@@ -46,6 +46,7 @@ h2{
   padding-right:10px;
  }
 b{
-font-family:"Arsenal SC", sans-serif;
-  
+  font-family:"Arsenal SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;  
 }
