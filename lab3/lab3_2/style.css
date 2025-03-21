@@ -22,8 +22,7 @@ body{
 background-image: url('patt2.svg');
 font-size:1.5rem;
 line-height:2rem;
-border: 5px solid #2E9AFF;
-border-radius: 6px;
+
 }
 h1{
   text-align:right;
