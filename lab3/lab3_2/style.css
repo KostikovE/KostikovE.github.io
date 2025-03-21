@@ -19,20 +19,20 @@ color:white;
 text-align:right;
 }
 body{
-background-image: url('patt2.svg');
+background-image: url('pattern.svg');
 font-size:1.5rem;
 line-height:2rem;
 
 }
 h1{
   text-align:right;
-  color:red;
+  color:#BAFF39;
  font-family: "Roboto",sans-serif;
 
 }
 h2{
   text-align:right;
-  color:red;
+  color:#BAFF39;
   font-family: "Roboto",sans-serif;
     }
  em{
@@ -50,7 +50,7 @@ strong{
  
 }
 article{
-  border: 5px solid #2E9AFF;
+  border: 5px solid #BAFF39;
   border-radius: 16px;
   margin: 5% auto;
   padding: 55px 40px;
