@@ -27,7 +27,12 @@
 		Атрибут <code>srcset</code> задаёт путь к графическим файлам с учётом размера изображения и устройств.
 	</p>
  	
-	<img  src="images/mushroom.jpg" alt="">
+	<img  src="images/mushroom.jpg" srcset="
+    mushroom_landscape.jpg 320w,
+   mushroom_portrait.jpg 480w,"
+  sizes="(max-width: 320px) 280px,
+            (max-width: 480px) 440px,
+            800px"alt="">
 		
 
 	<h2>Подпись к изображению</h2>
