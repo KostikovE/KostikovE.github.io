@@ -13,6 +13,10 @@
           			float: left;
           			background: url("css_sprites.png") no-repeat;
       			}
+			.closed .icon{
+				background-position: 0 -32px; 
+  				cursor: text;
+			}
 			.menu {
 				width: 200px;
 				background: #fff;
@@ -50,14 +54,22 @@
       			 <div class="icon"></div>
 			<li> <a href="#">Фильмы</a>
 				<ul>
+					<div class ="closed">
            				<div class="icon"></div>
 					<li><a href="#">Экшн</a></li>
+					</div>
+					<div class ="closed">
         				<div class="icon"></div>
 					<li><a href="#">Мелодрамы</a></li>
+					</div>
+					<div class ="closed">
            				<div class="icon"></div>
 					<li><a href="#">Сериалы</a></li>
+					</div>
+					<div class ="closed">
            				<div class="icon"></div>
 					<li><a href="#">Семейные</a></li>
+					</div>
 				</ul>
 			</li>
       			 <div class="icon"></div>
