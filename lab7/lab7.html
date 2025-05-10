@@ -138,9 +138,8 @@
         flex: 0 0 auto;
     }
         .portfolio-caption {
-        padding: 1.5rem;
-        background: white;
-        flex: 1;
+         padding: 1.5rem;
+          flex: 1;
     }
         
         .portfolio-item {
@@ -165,14 +164,20 @@
         
         .portfolio-overlay {
             position: absolute;
-            bottom: 0;
+            top: 0;
             left: 0;
             right: 0;
+            bottom: 0;
             background-color: rgba(0, 0, 0, 0.7);
             color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
             padding: 1rem;
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
+            text-align: center;
         }
         
         .portfolio-item:hover .portfolio-overlay {
@@ -316,7 +321,7 @@
                 <p class="lead">Некоторые из моих последних проектов</p>
             </div>
             
-           <div class="row">
+          <div class="row">
                 <!-- Работа 1 -->
                 <div class="portfolio-col">
                     <div class="portfolio-item">
@@ -325,7 +330,7 @@
                             <div class="portfolio-overlay">
                                 <h5>Игра</h5>
                                 <p>Первая версия хоррор-игры</p>
-                                <a href="#" class="btn btn-sm btn-outline-light">Подробнее</a>
+                                <a href="#" class="btn btn-sm btn-outline-light mt-2">Подробнее</a>
                             </div>
                         </div>
                         <div class="portfolio-caption">
@@ -343,7 +348,7 @@
                             <div class="portfolio-overlay">
                                 <h5>Организационный Сайт</h5>
                                 <p>Веб-сайт для поликлинники</p>
-                                <a href="#" class="btn btn-sm btn-outline-light">Подробнее</a>
+                                <a href="#" class="btn btn-sm btn-outline-light mt-2">Подробнее</a>
                             </div>
                         </div>
                         <div class="portfolio-caption">
@@ -361,7 +366,7 @@
                             <div class="portfolio-overlay">
                                 <h5>Музыка</h5>
                                 <p>На данный момент мои треки ещё нигде не опубликованы, кроме платформы YouTube</p>
-                                <a href="#" class="btn btn-sm btn-outline-light">Подробнее</a>
+                                <a href="#" class="btn btn-sm btn-outline-light mt-2">Подробнее</a>
                             </div>
                         </div>
                         <div class="portfolio-caption">
@@ -373,7 +378,6 @@
             </div>
         </div>
     </section>
-     
  <!-- Футер -->
     <footer class="full-width-footer">
         <div class="footer-content">
