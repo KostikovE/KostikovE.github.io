@@ -123,17 +123,34 @@
             padding: 5rem 0;
           
         }
+       .portfolio-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px; 
+    }
+    
+    .portfolio-col {
+        padding: 15px;
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+       .portfolio-img-container {
+        flex: 0 0 auto;
+    }
+        .portfolio-caption {
+        padding: 1.5rem;
+        background: white;
+        flex: 1;
+    }
         
         .portfolio-item {
-            position: relative;
-            margin-bottom: 30px;
-            overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s;
         }
         
         .portfolio-item:hover {
@@ -299,53 +316,63 @@
                 <p class="lead">Некоторые из моих последних проектов</p>
             </div>
             
-            <div class="row">
+           <div class="row">
                 <!-- Работа 1 -->
-                <div class="col-md-4 d-flex">
-                  
-                    <div class="portfolio-item card h-100">
-                      <div class="portfolio-img-container">
-                        <img src="images/Horror.png" alt="Проект 1" class="portfolio-img">
-                        <div class="portfolio-overlay">
+                <div class="portfolio-col">
+                    <div class="portfolio-item">
+                        <div class="portfolio-img-container">
+                            <img src="images/Horror.png" alt="Проект 1" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <h5>Игра</h5>
+                                <p>Первая версия хоррор-игры</p>
+                                <a href="#" class="btn btn-sm btn-outline-light">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-caption">
                             <h5>Игра</h5>
                             <p>Первая версия хоррор-игры</p>
-                            <a href="#" class="btn btn-sm btn-outline-light">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Работа 2 -->
+                <div class="portfolio-col">
+                    <div class="portfolio-item">
+                        <div class="portfolio-img-container">
+                            <img src="images/web_page.PNG" alt="Проект 2" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <h5>Организационный Сайт</h5>
+                                <p>Веб-сайт для поликлинники</p>
+                                <a href="#" class="btn btn-sm btn-outline-light">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-caption">
+                            <h5>Организационный Сайт</h5>
+                            <p>Веб-сайт для поликлинники</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Работа 3 -->
+                <div class="portfolio-col">
+                    <div class="portfolio-item">
+                        <div class="portfolio-img-container">
+                            <img src="images/music.JPG" alt="Проект 3" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <h5>Музыка</h5>
+                                <p>На данный момент мои треки ещё нигде не опубликованы, кроме платформы YouTube</p>
+                                <a href="#" class="btn btn-sm btn-outline-light">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-caption">
+                            <h5>Музыка</h5>
+                            <p>На данный момент мои треки ещё нигде не опубликованы, кроме платформы YouTube</p>
                         </div>
                     </div>
                 </div>
             </div>
-                
-                <!-- Работа 2 -->
-                <div class="col-md-4 d-flex ">
-                  
-                    <div class="portfolio-item card h-100">
-                      <div class="portfolio-img-container">
-                        <img src="images/web_page.PNG" alt="Проект 2" class="portfolio-img">
-                        <div class="portfolio-overlay ">
-                            <h5>Организационный Сайт</h5>
-                            <p>Веб-сайт для поликлинники</p>
-                            <a href="#" class="btn btn-sm btn-outline-light">Подробнее</a>
-                        </div>
-                    </div>
-                </div>
-              </div>
-            
-               <!-- Работа 3 -->
-                <div class="col-md-4 d-flex">
-                    <div class="portfolio-item card h-100">
-                      <div class="portfolio-img-container">
-                        <img src="images/music.JPG" alt="Проект 3" class="portfolio-img">
-                        <div class="portfolio-overlay">
-                            <h5>Музыка</h5>
-                            <p>На данный момент мои треки ещё нигде не опубликованы, кроме платформы YouTube </p>
-                            <a href="#" class="btn btn-sm btn-outline-light">Подробнее</a>
-                        </div>
-                    </div>
-                </div>
-             </div>
-          </div>
-      </div>
-</section>      
+        </div>
+    </section>
      
  <!-- Футер -->
     <footer class="full-width-footer">
