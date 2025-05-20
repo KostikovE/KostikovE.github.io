@@ -1,1 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пенсионный калькулятор</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="number"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .radio-group {
+            margin: 10px 0;
+        }
+        .radio-option {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Пенсионный калькулятор</h1>
+        <form id="pensionForm">
+            <div class="form-group">
+                <label for="age">Возраст:</label>
+                <input type="number" id="age" name="age" min="0" required>
+            </div>
 
+            <div class="form-group">
+                <label>Пол:</label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="male">Мужской</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Женский</label>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" id="calculateBtn">Рассчитать</button>
+        </form>
+        
+        <div class="form-group">
+            <label for="result">Результат:</label>
+            <textarea id="result" readonly></textarea>
+        </div>
+    </div>
+
+    <script>
+        'use strict';
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const calculateBtn = document.getElementById('calculateBtn');
+            calculateBtn.addEventListener('click', calculatePension);
+        });
+
+        function calculatePension() {
+            const ageInput = document.getElementById('age');
+            const genderInput = document.querySelector('input[name="gender"]:checked');
+            const resultOutput = document.getElementById('result');
+
+            try {
+                if (!genderInput) {
+                    throw new Error('Пожалуйста, укажите пол');
+                }
+
+                const age = parseInt(ageInput.value, 10);
+                const gender = genderInput.value;
+
+                if (isNaN(age) || age < 0) {
+                    throw new Error('Пожалуйста, введите корректный возраст');
+                }
+
+                resultOutput.value = getPensionMessage(age, gender);
+            } catch (error) {
+                resultOutput.value = error.message;
+            }
+        }
+
+        function getPensionMessage(age, gender) {
+            const MALE_RETIREMENT_AGE = 65;
+            const FEMALE_RETIREMENT_AGE = 60;
+            const MALE_PRE_RETIREMENT_AGE = 60;
+            const FEMALE_PRE_RETIREMENT_AGE = 55;
+            const WORKING_AGE_START = 18;
+
+            if (age <= 17) {
+                return "Вам работать ещё рано — учитесь";
+            }
+
+            if (gender === 'male') {
+                if (age >= WORKING_AGE_START && age <= MALE_PRE_RETIREMENT_AGE - 1) {
+                    return "Вам ещё работать и работать";
+                } else if (age >= MALE_PRE_RETIREMENT_AGE && age <= MALE_RETIREMENT_AGE - 1) {
+                    return "Скоро пенсия!";
+                } else if (age >= MALE_RETIREMENT_AGE) {
+                    return "Вам пора на пенсию";
+                }
+            } else {
+                if (age >= WORKING_AGE_START && age <= FEMALE_PRE_RETIREMENT_AGE - 1) {
+                    return "Вам ещё работать и работать";
+                } else if (age >= FEMALE_PRE_RETIREMENT_AGE && age <= FEMALE_RETIREMENT_AGE - 1) {
+                    return "Скоро пенсия!";
+                } else if (age >= FEMALE_RETIREMENT_AGE) {
+                    return "Вам пора на пенсию";
+                }
+            }
+
+            return "Да кто ты такой?";
+        }
+    </script>
+</body>
+</html>
